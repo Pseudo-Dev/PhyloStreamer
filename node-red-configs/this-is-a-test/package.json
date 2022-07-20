@@ -1,0 +1,16 @@
+{
+  "name": "this-is-a-test",
+  "version": "1.0.0",
+  "description": "testing node-red",
+  "main": "this-is-a-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red" : {
+        "nodes": {
+            "this-is-a-test": "this-is-a-test.js"
+        }
+    },
+  "author": "",
+  "license": "ISC"
+}

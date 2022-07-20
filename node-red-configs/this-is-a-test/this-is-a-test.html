@@ -1,0 +1,45 @@
+<script type="text/javascript">
+    RED.nodes.registerType('this-is-a-test',
+    {
+        category: 'sense iot control',
+        color: '#b27fb2',
+        defaults: 
+        {
+            name: {value:"starterVslue"},
+            condition: {value:"equals"},
+            checkvalue: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "sense.png",
+        label: function() 
+        {
+            return this.name||"str if";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="this-is-a-test">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-condition"><i class="icon-tag"></i> Condition</label>
+        <select id="node-input-condition">
+            <option value="equals">Equals</option>
+            <option value="contains">Contains</option>
+            <option value="notequals">Does NOT Equal</option>
+            <option value="notcontains">Does NOT Contain</option>
+            <option value="regex">Matches Regex</option>
+          </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-checkvalue"><i class="icon-tag"></i> Value</label>
+        <input type="text" id="node-input-checkvalue" placeholder="value">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="this-is-a-test">
+    <p>Repeat the input if the incoming string equals or contains a specific value.</p>
+</script>
